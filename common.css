@@ -1,6 +1,6 @@
 body  {margin: 0; padding: 0}
 .wrap { width: 100%; min-height: 100vh; }
-.flex {display: flex; gap: 20px; margin: 100px;}
+.flex {display: flex; gap: 20px; margin: 100px; flex-wrap: wrap;}
 
 /* 공통 */
 .frame {
@@ -187,3 +187,37 @@ body  {margin: 0; padding: 0}
     }
   }
 /* //2. 해 움직이기 */
+
+/* 3. 원 */
+.day3 {background:#E56262;}
+.day3_wrap {position: absolute; transform: translate(-50%, -50%); left: 50%; top: 50%; width: 100px; height: 100px;}
+.day3_wrap > * { box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);  background: #fff; border-radius: 50%; position: absolute;}
+.circle1 {animation: circleMove 2s infinite alternate ease-in-out; width: 90px; height: 90px;}
+.circle2 {animation: circleMove2 2s infinite alternate ease-in-out; width: 60px; height: 60px; left: 15px; top: 15px;}
+.circle3 {animation: circleMove3 2s infinite alternate ease-in-out; width: 30px; height: 30px; left: 30px; top: 30px;}
+
+@keyframes circleMove {
+    0%, 10% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes circleMove2 {
+    0%, 40% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes circleMove3 {
+    0%, 70% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+/* //3. 원 */
