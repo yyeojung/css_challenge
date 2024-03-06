@@ -192,9 +192,9 @@ body  {margin: 0; padding: 0}
 .day3 {background:#E56262;}
 .day3_wrap {position: absolute; transform: translate(-50%, -50%); left: 50%; top: 50%; width: 100px; height: 100px;}
 .day3_wrap > * { box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);  background: #fff; border-radius: 50%; position: absolute;}
-.circle1 {animation: circleMove 2s infinite alternate ease-in-out; width: 90px; height: 90px;}
-.circle2 {animation: circleMove2 2s infinite alternate ease-in-out; width: 60px; height: 60px; left: 15px; top: 15px;}
-.circle3 {animation: circleMove3 2s infinite alternate ease-in-out; width: 30px; height: 30px; left: 30px; top: 30px;}
+.day3_wrap .circle1 {animation: circleMove 2s infinite alternate ease-in-out; width: 90px; height: 90px;}
+.day3_wrap .circle2 {animation: circleMove2 2s infinite alternate ease-in-out; width: 60px; height: 60px; left: 15px; top: 15px;}
+.day3_wrap .circle3 {animation: circleMove3 2s infinite alternate ease-in-out; width: 30px; height: 30px; left: 30px; top: 30px;}
 
 @keyframes circleMove {
     0%, 10% {
@@ -221,3 +221,16 @@ body  {margin: 0; padding: 0}
     }
 }
 /* //3. 원 */
+
+/* 4. 원 돌아가기 */
+.day4 {display: flex; justify-content: center; align-items: center;}
+.day4 .image_box {position: relative; width: 120px; height: 120px;}
+.day4 .image_box > * {position: absolute; left: 50%; top: 50%;  transform: translate(-50%, -50%);}
+.day4 .circle1, .day4 .circle2 {border-radius: 50%; border-width: 1px; border-style: solid;  transform: translate(-50%, -50%); transition: all 1.5s;}
+.day4 .circle1 {width: 120px; height: 120px; border-color: #fff #fff #fff transparent; }
+.day4 .circle2 {width: 110px; height: 110px; border-color: #fff transparent #fff #fff; }
+.day4 img {width: 100px; height: 100px; border-radius: 50%;}
+.day4 .image_box:hover .circle1 { transform: translate(-50%, -50%) rotate(360deg);}
+.day4 .image_box:hover .circle2 { transform: translate(-50%, -50%) rotate(-360deg);}
+
+/* 4. 원 돌아가기 */

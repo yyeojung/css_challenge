@@ -11,3 +11,4 @@ document.addEventListener('DOMContentLoaded', function() {
       menuBtn.classList.remove("no_animation")
     });
   };
+
