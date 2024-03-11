@@ -247,3 +247,4 @@ body  {margin: 0; padding: 0}
 #check-2:checked ~ .active {transform: translateX(70px);}
 #check-3:checked ~ .active {transform: translateX(140px);}
 /* 5. 배경 바꾸기 */
+

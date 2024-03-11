@@ -19,7 +19,6 @@ const changeBg = () => {
         const checkBox= document.getElementById(`check-${i}`);
         checkBox.addEventListener('click', function() {
             const background = document.querySelector('.frame .bg');
-            console.log(checkBox, background.style.left)
             if(checkBox.classList.contains('check-1')) {
                 background.style.left = '0px';
             } else if (checkBox.classList.contains('check-2')) {

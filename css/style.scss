@@ -1,0 +1,67 @@
+
+/*  6. 카드 뒤집기 */
+.day6 {
+    background: #4B4841;
+
+    .card {
+        display: inline-grid;
+        width: 320px; 
+        height: 180px; 
+        background: #FFCE4E; 
+        border-radius: 20px; 
+        box-shadow: 8px 10px 15px 0 rgba(0, 0, 0, 0.5); 
+        position: relative;
+        transition: all 1s;
+        cursor: pointer;
+        transform: perspective(800px) rotateX(0);
+        transform-style: preserve-3d;
+        
+        &:hover {
+            transform: perspective(800px) rotateX(180deg);
+        }
+    }
+
+    .front, .back {
+        grid-area: 1 / 1 / 1 / 1; 
+        backface-visibility: hidden;
+
+        img {
+            position: absolute;
+            left: 50%;
+        }
+    }
+
+    .front {
+        img {
+            top: 50%;
+            animation: bycicle .5s infinite ease-in-out;
+        }
+    }
+
+    .back {
+        transform: rotateX(180deg);    
+        img {     
+            transform: translateX(-50%);  
+            animation: helicopter 2s infinite ease-in-out;
+        }
+
+    }
+
+    @keyframes bycicle {
+        0%, 100% {
+            transform: scaleY(1) translate(-50%, -50%);
+        }
+        50% {
+            transform: scaleY(1.1) translate(-50%, -50%);
+        }
+    }
+
+    @keyframes helicopter {
+        0%, 100% {
+            top: 10px;
+        }
+        50% {
+            top: 90px;
+        }
+    }
+}
