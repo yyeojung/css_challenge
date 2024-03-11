@@ -4,19 +4,22 @@
   background: #4B4841;
 }
 .day6 .card {
-  display: inline-grid;
   width: 320px;
   height: 180px;
-  background: #FFCE4E;
+}
+.day6 .flip {
+  display: inline-grid;
+  width: 100%;
+  height: 100%;
   border-radius: 20px;
   box-shadow: 8px 10px 15px 0 rgba(0, 0, 0, 0.5);
+  background: #FFCE4E;
   position: relative;
   transition: all 1s;
-  cursor: pointer;
   transform: perspective(800px) rotateX(0);
   transform-style: preserve-3d;
 }
-.day6 .card:hover {
+.day6 .flip:hover {
   transform: perspective(800px) rotateX(180deg);
 }
 .day6 .front, .day6 .back {
